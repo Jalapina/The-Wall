@@ -1,0 +1,23 @@
+<h1>The Wall</h1>
+<h2>Post on the Wall {{user.name}} <a href="/#!/" ng-click="logout()">Logout</a></h2>
+<form>
+
+<textarea cols="30" rows="10" placeholder="Add a Post" ng-model="userpost.post" required=""></textarea>
+<input type="submit" value="Save" ng-click="post()">
+
+</form>
+<hr>
+<ol>
+    <li ng-repeat="post in allpost">
+        <h3>{{post.message}}</h3>
+
+        <form >
+            <input type="text" ng-model="addingcomment.comment" required="">
+            <input type="submit" value="Comment" ng-click="comment(post._id, addingcomment)">
+        </form>
+        <div ng-repeat="comments in post.comment">
+            {{comments.comments}}
+        </div>
+    </li>
+</ol>
+

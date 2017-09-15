@@ -1,0 +1,16 @@
+ <h1>Login</h1>
+    <form>
+        <input type="email" placeholder="Email" ng-model="loginUser.email">
+        <input type="password" placeholder="Password" ng-model="loginUser.password">
+        <input type="submit" value="Login" ng-click="login()">
+    </form>
+    <br><hr>
+    <h1>Register</h1>
+    <form>
+        <input type="text" placeholder="First Name" ng-model="reguser.first_name">
+        <input type="text" placeholder="Last Name" ng-model="reguser.last_name">
+        <input type="email" placeholder="Email" ng-model="reguser.email">
+        <input type="password" placeholder="Password" ng-model="reguser.password">
+        <input type="password" placeholder="Confirm Password" ng-model="reguser.confirm">
+        <input type="submit" value="Login" ng-click="register()">
+    </form>
